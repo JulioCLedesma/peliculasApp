@@ -19,7 +19,7 @@ export class AddMovieComponent {
       cover: ''
     };
     movieId: string | null = '';
-    
+
     constructor(private moviesService: MoviesService, private router: Router) {}
 
 
@@ -36,11 +36,9 @@ export class AddMovieComponent {
     }
 
     cancel() {
-      // Redirigir a la página de detalles de la película
       if (this.movieId) {
         this.router.navigate(['/movie', this.movieId]);
       } else {
-        // Si no existe el ID, redirigir al listado de películas
         this.router.navigate(['/movies']);
       }
     }

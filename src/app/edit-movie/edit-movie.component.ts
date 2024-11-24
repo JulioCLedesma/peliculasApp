@@ -38,11 +38,9 @@ export class EditMovieComponent {
   }
   
   cancel() {
-    // Redirigir a la página de detalles de la película
     if (this.movieId) {
       this.router.navigate(['/movie', this.movieId]);
     } else {
-      // Si no existe el ID, redirigir al listado de películas
       this.router.navigate(['/movies']);
     }
   }

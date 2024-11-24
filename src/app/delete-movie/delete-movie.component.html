@@ -1,0 +1,12 @@
+<div class="container">
+    <h2 class="text-danger">Eliminar Película</h2>
+    <p><strong>Título:</strong> {{ movie?.title }}</p>
+    <p><strong>Año:</strong> {{ movie?.year }}</p>
+    <p><strong>Sinopsis:</strong> {{ movie?.synopsis }}</p>
+  
+    <div class="mt-4">
+      <button class="btn btn-danger" (click)="deleteMovie()">Confirmar Eliminación</button>
+      <button class="btn btn-secondary" [routerLink]="'/movies'">Cancelar</button>
+    </div>
+  </div>
+  

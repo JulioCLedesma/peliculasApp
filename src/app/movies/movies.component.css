@@ -45,3 +45,8 @@ footer p {
 .d-flex {
     background-color: rgb(219, 219, 219);
 }
+
+.table {
+    width: 50%;
+    margin: 0 auto;
+}

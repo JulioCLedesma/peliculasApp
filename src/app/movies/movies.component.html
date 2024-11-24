@@ -1,0 +1,24 @@
+<div class="container">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Título</th>
+            <th>Año</th>
+            <!--<th>Sinopsis</th>-->
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let movie of movies$ | async">
+            <td>{{ movie.title }}</td>
+            <td>{{ movie.year }}</td>
+           <!-- <td>{{ movie.synopsis }}</td>-->
+            <td>
+              <a [routerLink]="['/movie', movie.id]" class="btn btn-info btn-sm">Ver Detalles</a>
+              <a [routerLink]="['/edit-movie', movie.id]" class="btn btn-warning btn-sm">Editar</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+

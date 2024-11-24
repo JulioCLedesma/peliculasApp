@@ -1,0 +1,16 @@
+<div class="container">
+    <div *ngIf="movie">
+        <h2>{{ movie.title }}</h2>
+        <p><strong>Año:</strong> {{ movie.year }}</p>
+        <p><strong>Sinopsis:</strong> {{ movie.synopsis }}</p>
+        <p><strong>Cover</strong> {{ movie.cover }}</p>
+
+        <div class="mt-3">
+          <button class="btn btn-primary" [routerLink]="['/edit-movie', movie.id]">Editar</button>
+          <button class="btn btn-danger" [routerLink]="['/delete', movie.id]">Eliminar</button>
+          <button class="btn btn-secondary" [routerLink]="'/movies'">Regresar al catálogo</button>
+        </div>
+    </div>      
+</div>
+
+  

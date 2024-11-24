@@ -25,7 +25,7 @@ export class AddMovieComponent {
 
     
     addMovie() {
-      console.log('Adding movie:', this.movie);  // Verifica los datos antes de enviar
+      console.log('Adding movie:', this.movie);
       this.moviesService.addMovie(this.movie).subscribe({
         next: () => {
           console.log('Movie added successfully!');
